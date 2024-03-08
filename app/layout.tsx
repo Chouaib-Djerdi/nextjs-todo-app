@@ -24,18 +24,20 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <header>
-          <nav>
-            <ul className="flex items-center">
-              {links.map((link) => (
-                <li key={link.href}>
-                  <Link href={link.href}>{link.label}</Link>
-                </li>
-              ))}
-            </ul>
-          </nav>
-        </header>
-        {children}
+        <div className="p-10">
+          <header>
+            <nav>
+              <ul className="flex items-center">
+                {links.map((link) => (
+                  <li key={link.href}>
+                    <Link href={link.href}>{link.label}</Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          </header>
+          {children}
+        </div>
       </body>
     </html>
   );
